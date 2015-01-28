@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title></title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery.corner.js" type="text/javascript"></script>
+</head>
+<script type="text/javascript">
+    var init = function () {
+        var bg = document.getElementsByClassName('site-bg')[0];
+
+        bg.style.width = window.innerWidth + 'px';
+
+        bg.style.height = window.innerHeight + 'px';
+    };
+    window.onload = function () {
+        init();
+
+        $('.browser li').corner('5px');
+
+        $('.top').corner('5px');
+    };
+    window.onresize = function () {
+        init();
+    };
+    var isie = function () {
+        return navigator.appName == "Microsoft Internet Explorer";
+    };
+    var flag = isie();
+
+</script>
+<body style="padding:0;margin:0;">
+<div class="site-bg" style="background:rgb(15,112,207);position:fixed;width:100%;height:100%;"></div>
+<div style="width:100%;position:absolute;zoom:1;display: inline;text-align: center;top:25px;">
+    <img src="LOGO-V2.png" alt="" style="width:235px;margin:0 auto"/>
+</div>
+<div style="width:100%;position:absolute;zoom:1;display:inline;text-align:center;top:170px;">
+    <span style="font-weight:bold;margin:0 auto;color:#fff;font-size:45px;font-family:  Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,Microsoft YaHei UI,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif">
+        您使用的浏览器版本过低，不受此网站支持
+    </span>
+</div>
+<div style="width:100%;position:absolute;zoom:1;display:inline;text-align:center;top:250px;">
+    <span style="font-weight:bold;margin:0 auto;color:#fff;font-size:20px;font-family:  Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,Microsoft YaHei UI,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif">
+        您需要更新浏览器版本才能访问本站
+    </span>
+</div>
+<div style="width:100%;zoom:1;display:inline;position:absolute;top:300px;text-align: center;box-sizing: border-box;">
+    <div style="width:400px;margin:0 auto;overflow:hidden;zoom:1;">
+        <ul class="browser" style="list-style: none;overflow: hidden;padding:0;width:100%;zoom:1;">
+            <li style="cursor:pointer;overflow:hidden;border-radius:5px;background:#fff;box-sizing:border-box;float:left;width:80px;margin:0 10px;padding:5px;border:1px solid rgb(90,130,163)">
+                <img src="ie.png" alt="" style="width:100%;" title="最新版ie浏览器下载"/>
+            </li>
+            <li style="cursor:pointer;overflow:hidden;border-radius:5px;background:#fff;box-sizing:border-box;float:left;width:80px;margin:0 10px;padding:5px;border:1px solid rgb(90,130,163)">
+                <img src="sf.png" alt="" style="width:100%;" title="最新版safari浏览器下载"/>
+            </li>
+            <li style="cursor:pointer;overflow:hidden;border-radius:5px;background:#fff;box-sizing:border-box;float:left;width:80px;margin:0 10px;padding:5px;border:1px solid rgb(90,130,163)">
+                <img src="ff.png" alt="" style="width:100%;" title="最新版火狐浏览器下载"/>
+            </li>
+            <li style="cursor:pointer;overflow:hidden;border-radius:5px;background:#fff;box-sizing:border-box;float:left;width:80px;margin:0 10px;padding:5px;border:1px solid rgb(90,130,163)">
+                <img src="gg.png" alt="" style="width:100%;" title="最新版chrome浏览器下载"/>
+            </li>
+        </ul>
+    </div>
+</div>
+<div style="width:100%;position:absolute;top:420px;text-align: center;">
+    <span style="font-weight:bold;margin:0 auto;color:#fff;font-size:20px;font-family:  Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,Microsoft YaHei UI,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif">
+        您的浏览器评分
+    </span>
+
+    <div class="top"
+         style="background: #fff;overflow: hidden;margin: 0 auto;width:500px;margin:0 auto;margin-top:10px;font-size:14px;font-family:  Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,Microsoft YaHei UI,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif">
+        <ul style="list-style: none">
+            <li style="padding:10px 0;text-align: left;">您的浏览器(IE6)</li>
+            <li style="width:32%;background:rgb(148,138,84);height:24px;line-height: 24px;">125</li>
+            <li style="padding:10px 0;text-align: left;">chrome浏览器</li>
+            <li style="width:60%;background:rgb(245,55,73);height:24px;line-height: 24px;">258</li>
+            <li style="padding:10px 0;text-align: left;">火狐浏览器</li>
+            <li style="width:90%;background:rgb(245,55,73);height:24px;line-height: 24px;">413</li>
+            <li style="padding:10px 0;text-align: left;">safari浏览器</li>
+            <li style="width:80%;background:rgb(245,55,73);height:24px;line-height: 24px;">356</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
